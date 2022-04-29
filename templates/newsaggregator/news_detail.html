@@ -8,7 +8,6 @@
 
 <h2>I am news page</h2>
 
-
 <h3>{{ news.title }}</h3>
 <div>Date: {{ news.date_time }}</div>
 <p>{{ news.content }}</p>
@@ -17,6 +16,18 @@
 <a href="{{ news.link }}">{{ news.link }}</a>
 
 <img src="{{ news.main_image }}" alt="">
+
+
+<h1>Similar news</h1>
+{% for news in similar_news %}
+    <h3>{{ news.title }}</h3>
+    <div>Date: {{ news.date_time }}</div>
+    <p>{{ news.content }}</p>
+    <p>{{ news.category }}</p>
+    <a href="{{ news.link }}">{{ news.link }}</a>
+    <img src="{{ news.main_image }}" alt="">
+    <hr>
+{% endfor %}
 
 </body>
 </html>
